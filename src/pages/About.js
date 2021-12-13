@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div>
                   {/* ======= About Section ======= */}
-      <section id="about" className="about">
+      <section id="about" className="about section-show">
         {/* ======= About Me ======= */}
         <div className="about-me container">
           <div className="section-title">

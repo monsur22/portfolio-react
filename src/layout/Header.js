@@ -1,10 +1,12 @@
 import React from 'react'
-
+import { useState } from 'react';
 const Header = () => {
+
+
     return (
         <div>
                   {/* ======= Header ======= */}
-            <header id="header">
+            <header id="header" className="header-top">
                 <div className="container">
                 <h1><a href="index.html">Emily Jones</a></h1>
                 {/* Uncomment below if you prefer to use an image logo */}
@@ -13,7 +15,7 @@ const Header = () => {
                 <nav id="navbar" className="navbar">
                     <ul>
                     <li><a className="nav-link active" href="#header">Home</a></li>
-                    <li><a className="nav-link" href="#about">About</a></li>
+                    <li><a className="nav-link" href="#about" >About</a></li>
                     <li><a className="nav-link" href="#resume">Resume</a></li>
                     <li><a className="nav-link" href="#services">Services</a></li>
                     <li><a className="nav-link" href="#portfolio">Portfolio</a></li>

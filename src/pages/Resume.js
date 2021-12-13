@@ -3,7 +3,7 @@ import React from 'react'
 const Resume = () => {
     return (
         <div>
-                 <section id="resume" className="resume">
+                 <section id="resume" className="resume section-show">
         <div className="container">
           <div className="section-title">
             <h2>Resume</h2>
