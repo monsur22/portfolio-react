@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Resume from './pages/Resume';
+import Home from './pages/Home';
 // import Contact from './pages/Contact';
 
 function App() {
@@ -24,12 +25,13 @@ function App() {
       <Routes>
             {/* <Route path="/" element={<Header/>}/> */}
 
-            <Route path="/about" element={<About/>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/Portfolio" element={<Portfolio/>}/>
             <Route path="/Resume" element={<Resume/>}/>
             <Route path="/Services" element={<Services/>}/>
             <Route path="/about" element={<About/>}/>
+
 
       </Routes>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'
 const Header = () => {
 
 
@@ -14,12 +15,13 @@ const Header = () => {
                 <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
                 <nav id="navbar" className="navbar">
                     <ul>
-                    <li><a className="nav-link active" href="#header">Home</a></li>
-                    <li><a className="nav-link" href="#about" >About</a></li>
-                    <li><a className="nav-link" href="#resume">Resume</a></li>
-                    <li><a className="nav-link" href="#services">Services</a></li>
-                    <li><a className="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li><a className="nav-link" href="#contact">Contact</a></li>
+                    <li><a className="nav-link " href=""><Link to={'/'}>Home</Link></a></li>
+
+                    <li><a className="nav-link" href="" ><Link to={'/about'}>About</Link></a></li>
+                    <li><a className="nav-link" href=""><Link to={'/Resume'}>Resume</Link></a></li>
+                    <li><a className="nav-link" href=""><Link to={'/Services'}>Services</Link></a></li>
+                    <li><a className="nav-link" href=""><Link to={'/Portfolio'}>Portfolio</Link></a></li>
+                    <li><a className="nav-link" href=""><Link to={'/Contact'}>Contact</Link></a></li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle" />
                 </nav>{/* .navbar */}
