@@ -8,6 +8,11 @@ import {
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+import Services from './pages/Services';
+import Resume from './pages/Resume';
+// import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +24,11 @@ function App() {
       <Routes>
             {/* <Route path="/" element={<Header/>}/> */}
 
+            <Route path="/about" element={<About/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/Portfolio" element={<Portfolio/>}/>
+            <Route path="/Resume" element={<Resume/>}/>
+            <Route path="/Services" element={<Services/>}/>
             <Route path="/about" element={<About/>}/>
 
       </Routes>
