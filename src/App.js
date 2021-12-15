@@ -24,8 +24,9 @@ function App() {
 
       <Routes>
             {/* <Route path="/" element={<Header/>}/> */}
-
-            <Route path="/portfolio-react" element={<Home/>}/>
+            {/* Use for Git hub page */}
+            {/* <Route path="/portfolio-react" element={<Home/>}/> */}
+            <Route path="/" element={<Home/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/Portfolio" element={<Portfolio/>}/>
             <Route path="/Resume" element={<Resume/>}/>

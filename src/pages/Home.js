@@ -10,6 +10,7 @@ const Home = () => {
 
                 <p>MONSUR AHMED SHAFIQ</p>
                 <h4>SOFTWARE ENGINEER, ONE-PROOF LTD</h4>
+                <h2>I'm a professional <span>FULL STACT WEB DEVELOPER</span> from Dhaka</h2>
 
               </div>
                 <div className="social-links">
