@@ -22,11 +22,7 @@ function App() {
             {/* <Route path="/portfolio-react" element={<Home/>}/> */}
             <Route path="/*" element={<MainLayout/>}/>
             <Route path="/admin/*" element={<MainLayout/>}/>
-            {/* <Route path="/contact" element={<Contact/>}/>
-            <Route path="/Portfolio" element={<Portfolio/>}/>
-            <Route path="/Resume" element={<Resume/>}/>
-            <Route path="/Services" element={<Services/>}/>
-            <Route path="/about" element={<About/>}/> */}
+          
 
 
       </Routes>
