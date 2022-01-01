@@ -1,5 +1,5 @@
 import React from 'react'
-import proimg from '../monsur-passport.jpg'
+import proimg from '../../monsur-passport.jpg'
 
 const About = () => {
     return (

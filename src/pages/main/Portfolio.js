@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Button,Modal, } from 'react-bootstrap';
-import port1 from '../portfolio/portfolio-1.jpg'
-import port2 from '../portfolio/portfolio-2.jpg'
-import port3 from '../portfolio/portfolio-3.jpg'
+import port1 from '../../portfolio/portfolio-1.jpg'
+import port2 from '../../portfolio/portfolio-2.jpg'
+import port3 from '../../portfolio/portfolio-3.jpg'
 
 const Portfolio = () => {
 
