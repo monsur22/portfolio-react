@@ -6,6 +6,7 @@ import {
   useRoutes,
 } from "react-router-dom";
 import MainLayout from './layout/MainLayout';
+import AdminLayout from './layout/AdminLayout';
 import Login from "./pages/account/login/Login";
 import Registration from "./pages/account/registration/Registration";
 
@@ -13,9 +14,7 @@ import Registration from "./pages/account/registration/Registration";
 function App() {
   return (
 
-
     <>
-
 
       <Routes>
             {/* <Route path="/" element={<Header/>}/> */}
@@ -24,7 +23,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/registration" element={<Registration/>}/>
             <Route path="/*" element={<MainLayout/>}/>
-            <Route path="/admin/*" element={<MainLayout/>}/>
+            <Route path="/admin/*" element={<AdminLayout/>}/>
 
 
 

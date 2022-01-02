@@ -19,18 +19,14 @@ const MainLayout = () => {
         <>
             <Header/>
             <Routes>
-            {/* <Route path="/" element={<Header/>}/> */}
-            {/* Use for Git hub page */}
-            {/* <Route path="/portfolio-react" element={<Home/>}/> */}
-            <Route path="/" element={<Home/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/Portfolio" element={<Portfolio/>}/>
-            <Route path="/Resume" element={<Resume/>}/>
-            <Route path="/Services" element={<Services/>}/>
-            <Route path="/about" element={<About/>}/>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/Portfolio" element={<Portfolio/>}/>
+                <Route path="/Resume" element={<Resume/>}/>
+                <Route path="/Services" element={<Services/>}/>
+                <Route path="/about" element={<About/>}/>
 
-
-      </Routes>
+            </Routes>
 
             <Footer/>
         </>
