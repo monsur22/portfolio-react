@@ -16,7 +16,7 @@ import Services from '../pages/main/Services';
 import Resume from '../pages/main/Resume';
 const MainLayout = () => {
     return (
-        <div>
+        <>
             <Header/>
             <Routes>
             {/* <Route path="/" element={<Header/>}/> */}
@@ -33,7 +33,7 @@ const MainLayout = () => {
       </Routes>
 
             <Footer/>
-        </div>
+        </>
     )
 }
 
