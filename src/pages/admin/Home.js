@@ -6,7 +6,7 @@ const Home = () => {
 
             <section id="home" className="container section-show">
             <div className="home_container">
-              <h1>Admin Home</h1>
+              <h1>Amin HOme</h1>
 
             </div>
           </section>

@@ -1,41 +1,78 @@
-import React from 'react'
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'
+//import useState hook to create menu collapse state
+import React, { useState } from "react";
+
+//import react pro sidebar components
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarContent,
+} from "react-pro-sidebar";
+
+//import icons from react icons
+import { FaList, FaRegHeart } from "react-icons/fa";
+import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { RiPencilLine } from "react-icons/ri";
+import { BiCog } from "react-icons/bi";
+
+
+//import sidebar css from react-pro-sidebar module and our custom css
+import "react-pro-sidebar/dist/css/styles.css";
+import "./header.css";
+
+
 const Header = () => {
 
+    //create initial menuCollapse state using useState hook
+    const [menuCollapse, setMenuCollapse] = useState(false)
 
-    return (
-        <div>
-                  {/* ======= Header ======= */}
-            <header id="header" className="header-top">
-                <div className="container">
-                <h1><a href="index.html">ADMIN</a></h1>
-                {/* Uncomment below if you prefer to use an image logo */}
-                {/* <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> */}
-                <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
-                <nav id="navbar" className="navbar">
-                    <ul>
-                    <li><a className="nav-link " href=""><Link to={'/'}>Home</Link></a></li>
+    //create a custom function that will change menucollapse state from false to true and true to false
+  const menuIconClick = () => {
+    //condition checking to change state from true to false and vice versa
+    menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+  };
 
-                    <li><a className="nav-link" href="" ><Link to={'/about'}>About</Link></a></li>
-                    <li><a className="nav-link" href=""><Link to={'/Resume'}>Resume</Link></a></li>
-                    <li><a className="nav-link" href=""><Link to={'/Services'}>Services</Link></a></li>
-                    <li><a className="nav-link" href=""><Link to={'/Portfolio'}>Portfolio</Link></a></li>
-                    <li><a className="nav-link" href=""><Link to={'/Contact'}>Contact</Link></a></li>
-                    <li><a className="nav-link" href=""><Link to={'/Contact'}>Logout</Link></a></li>
-                    </ul>
-                    <i className="bi bi-list mobile-nav-toggle" />
-                </nav>{/* .navbar */}
-                <div className="social-links">
-                    <a href="#" className="twitter"><i className="bi bi-twitter" /></a>
-                    <a href="#" className="facebook"><i className="bi bi-facebook" /></a>
-                    <a href="#" className="instagram"><i className="bi bi-instagram" /></a>
-                    <a href="#" className="linkedin"><i className="bi bi-linkedin" /></a>
-                </div>
-                </div>
-            </header>{/* End Header */}
-        </div>
-    )
-}
+  return (
+    <>
+      <div id="header">
+          {/* collapsed props to change menu size using menucollapse state */}
+        <ProSidebar collapsed={menuCollapse}>
+          <SidebarHeader>
+          <div className="logotext">
+              {/* small and big change using menucollapse state */}
+              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+            </div>
+            <div className="closemenu" onClick={menuIconClick}>
+                {/* changing menu collapse icon on click */}
+              {menuCollapse ? (
+                <FiArrowRightCircle/>
+              ) : (
+                <FiArrowLeftCircle/>
+              )}
+            </div>
+          </SidebarHeader>
+          <SidebarContent>
+            <Menu iconShape="square">
+              <MenuItem active={true} icon={<FiHome />}>
+                Home
+              </MenuItem>
+              <MenuItem icon={<FaList />}>Category</MenuItem>
+              <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
+              <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
+              <MenuItem icon={<BiCog />}>Settings</MenuItem>
+            </Menu>
+          </SidebarContent>
+          <SidebarFooter>
+            <Menu iconShape="square">
+              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
+            </Menu>
+          </SidebarFooter>
+        </ProSidebar>
+      </div>
+    </>
+  );
+};
 
-export default Header
+export default Header;
