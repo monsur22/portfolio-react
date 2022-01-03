@@ -6,13 +6,14 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
+  SubMenu,
   SidebarHeader,
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
 
 //import icons from react icons
-import { FaList, FaRegHeart } from "react-icons/fa";
+import { FaList, FaRegHeart, FaHeart } from "react-icons/fa";
 import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import { RiPencilLine } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
@@ -61,6 +62,10 @@ const Header = () => {
               <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
               <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
               <MenuItem icon={<BiCog />}>Settings</MenuItem>
+              <SubMenu title="Components" icon={<FaHeart />}>
+                <MenuItem>Component 1</MenuItem>
+                <MenuItem>Component 2</MenuItem>
+              </SubMenu>
             </Menu>
           </SidebarContent>
           <SidebarFooter>

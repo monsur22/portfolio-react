@@ -9,6 +9,7 @@ import {
 import Header from '../pages/admin/Header';
 import Footer from '../pages/admin/Footer';
 import Home from '../pages/admin/Home';
+import About from '../pages/admin/About';
 
 
 const AdminLayout = () => {
@@ -20,6 +21,7 @@ const AdminLayout = () => {
 
 
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/About" element={<About/>}/>
                     {/* <Route path="/contact" element={<Contact/>}/>
                     <Route path="/Portfolio" element={<Portfolio/>}/>
                     <Route path="/Resume" element={<Resume/>}/>
