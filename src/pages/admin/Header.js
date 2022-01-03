@@ -20,7 +20,7 @@ import { BiCog } from "react-icons/bi";
 
 //import sidebar css from react-pro-sidebar module and our custom css
 import "react-pro-sidebar/dist/css/styles.css";
-import "./header.css";
+import classes from "./header.module.css";
 
 
 const Header = () => {
@@ -36,22 +36,21 @@ const Header = () => {
 
   return (
     <>
-      <div id="header">
+      <div className={classes.header}>
           {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebar collapsed={menuCollapse}>
           <SidebarHeader>
           <div className="logotext">
               {/* small and big change using menucollapse state */}
-              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
-            </div>
-            <div className="closemenu" onClick={menuIconClick}>
-                {/* changing menu collapse icon on click */}
+              <p>{menuCollapse ? "Logo" : "Admin"}</p>
+          </div>
+          {/* <div className="closemenu" onClick={menuIconClick}>
               {menuCollapse ? (
                 <FiArrowRightCircle/>
               ) : (
                 <FiArrowLeftCircle/>
               )}
-            </div>
+          </div> */}
           </SidebarHeader>
           <SidebarContent>
             <Menu iconShape="square">

@@ -1,16 +1,13 @@
 import React from 'react'
-
+import classes from "./adminlayout.module.css";
 const Home = () => {
     return (
         <>
+          <div className={classes.containerr}>
+          <h1>Amin HOme</h1>
 
-            <section id="home" className="container section-show">
-            <div className="home_container">
-              <h1>Amin HOme</h1>
-
-            </div>
-          </section>
-
+         
+          </div>
         </>
     )
 }
