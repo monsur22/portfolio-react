@@ -42,16 +42,15 @@ console.log(data);
               <div className="section-title">
 
                 <p>{item.name}</p>
-                <h4>SOFTWARE ENGINEER, ONE-PROOF LTD</h4>
-                <h2>I'm a professional <span>FULL STACT WEB DEVELOPER</span> from Dhaka</h2>
+                <h4>{item.position}</h4>
+                <h2>{item.tittle} </h2>
 
               </div>
                 <div className="social-links">
-                    <a href="#" className="twitter"><i className="bi bi-twitter" /></a>
-                    <a href="#" className="facebook"><i className="bi bi-facebook" /></a>
-                    <a href="#" className="instagram"><i className="bi bi-instagram" /></a>
-                    <a href="#" className="google-plus"><i className="bi bi-skype" /></a>
-                    <a href="#" className="linkedin"><i className="bi bi-linkedin" /></a>
+                    <a href={item.github} className="twitter"><i className="bi bi-github" /></a>
+                    <a href={item.facebook} className="facebook"><i className="bi bi-facebook" /></a>
+                    <a href={item.skype} className="google-plus"><i className="bi bi-skype" /></a>
+                    <a href={item.linkedin} className="linkedin"><i className="bi bi-linkedin" /></a>
                 </div>
 
 
