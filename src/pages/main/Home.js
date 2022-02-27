@@ -3,20 +3,6 @@ import axios from 'axios';
 import { useHistory } from 'react-router';
 
 const Home = () => {
-  // const [data, setData] = useState({hits:[]});
-
-  // useEffect(async () => {
-  //   await axios.get("http://localhost:8000/api/gethome")
-  //   .then(response =>response.json())
-  //   .then(function(response) {
-  //       console.log(response.data);
-  //       setData(response);
-
-  //   })
-  //   .catch(function(error) {
-  //       console.log(error);
-  //   });
-  //   }, []);
   const [data, setData] = useState([]);
 
   useEffect(async () => {
