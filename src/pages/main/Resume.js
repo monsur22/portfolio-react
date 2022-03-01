@@ -1,6 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState  } from "react";
+import axios from 'axios';
+import { useHistory } from 'react-router';
 
 const Resume = () => {
+  const [data, setData] = useState([]);
+  const [experience, setExperience] = useState([]);
+
+  useEffect(async () => {
+    await axios.get("http://localhost:8000/api/geteducation")
+    .then(function(response) {
+        console.log(response.data);
+        setData(response.data);
+
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+    getexp();
+    }, []);
+      //   useEffect(async () => {
+      // await axios.get("http://localhost:8000/api/getexperience")
+      // .then(function(response) {
+      //     console.log(response.experience);
+      //     setExperience(response.experience);
+
+      // })
+      // .catch(function(error) {
+      //     console.log(error);
+      // });
+      // }, []);
+      const getexp = async () => {
+        axios.get(`http://localhost:8000/api/getexperience`)
+            .then((getexp) => {
+                console.log(getexp.data);
+
+                setExperience(getexp.data);
+            })
+      }
+
+// console.log(data);
     return (
         <div>
                  <section id="resume" className="resume section-show">
@@ -24,18 +62,14 @@ const Resume = () => {
                 <p />
               </div>
               <h3 className="resume-title">Education</h3>
-              <div className="resume-item">
-                <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                <h5>2015 - 2016</h5>
-                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-              </div>
-              <div className="resume-item">
-                <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                <h5>2010 - 2014</h5>
-                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-              </div>
+              {data.map((item) => (
+                <div className="resume-item">
+                  <h4>{item.degree}</h4>
+                  <h5>{item.year}</h5>
+                  <p><em>{item.school}</em></p>
+                  <p>{item.s_desc}</p>
+                </div>
+              ))}
             </div>
             <div className="col-lg-6">
               <h3 className="resume-title">Professional Experience</h3>
