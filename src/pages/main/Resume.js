@@ -18,17 +18,7 @@ const Resume = () => {
     });
     getexp();
     }, []);
-      //   useEffect(async () => {
-      // await axios.get("http://localhost:8000/api/getexperience")
-      // .then(function(response) {
-      //     console.log(response.experience);
-      //     setExperience(response.experience);
 
-      // })
-      // .catch(function(error) {
-      //     console.log(error);
-      // });
-      // }, []);
       const getexp = async () => {
         axios.get(`http://localhost:8000/api/getexperience`)
             .then((getexp) => {
@@ -73,32 +63,21 @@ const Resume = () => {
             </div>
             <div className="col-lg-6">
               <h3 className="resume-title">Professional Experience</h3>
-              <div className="resume-item">
-                <h4>Senior graphic design specialist</h4>
-                <h5>2019 - Present</h5>
-                <p><em>Experion, New York, NY </em></p>
-                <p>
-                </p><ul>
-                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                </ul>
-                <p />
-              </div>
-              <div className="resume-item">
-                <h4>Graphic design specialist</h4>
-                <h5>2017 - 2018</h5>
-                <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                <p>
-                </p><ul>
-                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                </ul>
-                <p />
-              </div>
+              {experience.map((item) => (
+                <div className="resume-item">
+                  <h4>{item.position}</h4>
+                  <h5>{item.year}</h5>
+                  <p><em>{item.company} </em></p>
+                  <p>
+                  </p><ul>
+                    <li>{item.s_desc1}</li>
+                    <li>{item.s_desc2}</li>
+                    <li>{item.s_desc3}</li>
+                    <li>{item.s_desc4}</li>
+                  </ul>
+                  <p />
+                </div>
+              ))}
             </div>
           </div>
         </div>
