@@ -44,13 +44,9 @@ console.log(data);
                   <div className="portfolio-wrap">
                     <img src={port1} className="img-fluid" alt />
                     <div className="portfolio-info">
-                      <h4>App 1</h4>
-                      <p>App</p>
                       <div className="portfolio-links">
-                        <a href="#" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1" onClick = {() => showbyId(item.id)}></a>
-                        {/* <Link className="edit-link" onClick = {() => showbyId(item.id)} >link</Link> */}
                         <a href="#" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" className="portfolio-details-lightbox" title="Portfolio Details" ><i className="bx bx-link" /></a>
-                        <Link to = {`/Portfolio/${item.id}`} className="edit-link" onClick={() => showbyId(item.id)}>link</Link>
+                        <Link to = {`/Portfolio/${item.id}`} className="edit-link" onClick={() => showbyId(item.id)}>Details</Link>
                       </div>
                     </div>
                   </div>
