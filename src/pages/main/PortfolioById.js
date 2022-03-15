@@ -7,7 +7,7 @@ import {
   Route,
   useParams
 } from "react-router-dom";
-
+import portdetails from '../../portfolio/portfolio-details-2.jpg'
 
 const PortfolioById = () => {
   const { id } = useParams(); // <-- access id match param here
@@ -38,7 +38,11 @@ console.log(data);
                     <div className="portfolio-details-slider swiper">
                       {/* <div class="swiper-wrapper align-items-center"> */}
                       <div className="swiper-slide">
-                        <img src="assets/img/portfolio/portfolio-details-1.jpg" alt />
+                        {/* <img src="assets/img/portfolio/portfolio-details-1.jpg" alt /> */}
+                        { data.image == null ?<img src={portdetails} alt="Red dot" /> :<img src={portdetails} alt="Red dot" />
+
+                        }
+                        {/* <p>{data.image}</p> */}
                       </div>
                       {/* <div class="swiper-slide">
                         <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
